@@ -18,11 +18,12 @@ const SliderCard = ({
           {icon}
         </span>
         <h4 className="font-medium text-[32px]">{specialistName}</h4>
-        <p className="font-normal text-xl text-secondary max-w-94 pt-5 pb-2">
+        <p className="font-normal text-xl text-secondary w-94 pt-5 pb-2">
           {desc}
         </p>
 
-        <Button className="bg-transparent text-primary! px-0!"
+        <Button
+          className="bg-transparent text-primary! px-0!"
           btntext="Book Consultation"
           icon={<IoArrowForward className="text-xl" />}
         />
