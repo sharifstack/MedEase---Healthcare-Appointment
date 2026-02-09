@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-primary: #2f80ed;
+  --color-secondary: #808080;
+  --color-title: #111111;
+  --color-background: #f7f7f7;
+  --color-textbadge: #f2f7ff;
+  --color-slidericon: #e6e6e6;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.font-expertise {
+  font-family: var(--font-cormorant);
+}
+
+.container {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 0px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 16px;
+  }
+}
+
+.heading80 {
+  font-size: 80px;
+  line-height: 150%;
+  font-weight: 500;
+  letter-spacing: -3%;
+}
+
+.regular24 {
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 400;
+  letter-spacing: -2%;
+}
+
+.regular20 {
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 400;
+  letter-spacing: -2%;
+}
+
+.medium20 {
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
+  letter-spacing: -2%;
 }
