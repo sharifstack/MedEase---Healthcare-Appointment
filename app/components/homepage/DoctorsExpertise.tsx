@@ -75,6 +75,7 @@ const DoctorsExpertise = () => {
                   specialistName="Cardiologist"
                   desc="Heart specialist focusing on cardiovascular health and diseases."
                   icon={<RiHeartPulseFill className="text-4xl text-primary " />}
+                  showButton={true}
                 />
               </SwiperSlide>
 
@@ -83,6 +84,7 @@ const DoctorsExpertise = () => {
                   specialistName="Neurologist"
                   desc="Doctor specializing in diagnosing and treating nervous system disorders."
                   icon={<PiBrainFill className="text-4xl text-primary " />}
+                  showButton={true}
                 />
               </SwiperSlide>
 
@@ -93,6 +95,7 @@ const DoctorsExpertise = () => {
                   icon={
                     <PiEarBold className="text-4xl text-background/70 bg-primary rounded-full p-1" />
                   }
+                  showButton={true}
                 />
               </SwiperSlide>
 
@@ -103,6 +106,7 @@ const DoctorsExpertise = () => {
                   icon={
                     <PiBabyFill className="text-4xl text-background/70 bg-primary rounded-full p-1" />
                   }
+                  showButton={true}
                 />
               </SwiperSlide>
             </Swiper>
@@ -115,12 +119,14 @@ const DoctorsExpertise = () => {
           specialistName="Cardiologist"
           desc="Heart specialist focusing on cardiovascular health and diseases."
           icon={<RiHeartPulseFill className="text-4xl text-primary " />}
+          showButton={true}
         />
 
         <SliderCard
           specialistName="Neurologist"
           desc="Doctor specializing in diagnosing and treating nervous system disorders."
           icon={<PiBrainFill className="text-4xl text-primary " />}
+          showButton={true}
         />
 
         <SliderCard
@@ -129,6 +135,7 @@ const DoctorsExpertise = () => {
           icon={
             <PiEarBold className="text-4xl text-background/70 bg-primary rounded-full p-1" />
           }
+          showButton={true}
         />
 
         <SliderCard
@@ -137,6 +144,7 @@ const DoctorsExpertise = () => {
           icon={
             <PiBabyFill className="text-4xl text-background/70 bg-primary rounded-full p-1" />
           }
+          showButton={true}
         />
 
         <div className="mt-2">

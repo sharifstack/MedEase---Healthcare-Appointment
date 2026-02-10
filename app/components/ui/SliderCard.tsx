@@ -6,13 +6,21 @@ const SliderCard = ({
   specialistName,
   desc,
   icon,
+  showButton = false,
+  src,
+  alt,
+  className = "",
 }: {
   specialistName: string;
   desc: string;
   icon: React.ReactNode;
+  showButton?: boolean;
+  src?: string;
+  alt?: string;
+  className?: string;
 }) => {
   return (
-    <div className="py-12 px-6  rounded-xl bg-background">
+    <div className={`py-12 px-6  rounded-xl bg-background flex ${className}`}>
       <div className="">
         <span className="icon p-2 inline-block rounded-full bg-secondary/20">
           {icon}
@@ -22,11 +30,18 @@ const SliderCard = ({
           {desc}
         </p>
 
-        <Button
-          className="bg-transparent text-primary! px-0!"
-          btntext="Book Consultation"
-          icon={<IoArrowForward className="text-xl" />}
-        />
+        {showButton && (
+          <div>
+            <Button
+              className="bg-transparent text-primary! px-0!"
+              btntext="Book Consultation"
+              icon={<IoArrowForward className="text-xl" />}
+            />
+          </div>
+        )}
+      </div>
+      <div>
+        <img className="w-full h-full object-cover" src={src} alt={alt} />
       </div>
     </div>
   );
