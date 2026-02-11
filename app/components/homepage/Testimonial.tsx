@@ -10,18 +10,48 @@ import "swiper/css/pagination";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import testimonial from "../../../public/imgone.png";
 import testimonialtwo from "../../../public/imagetwo.png";
+import Button from "../ui/Button";
+import { IoArrowForward } from "react-icons/io5";
 
 const Testimonial = () => {
   return (
     <div className="py-15 md:py-30">
       <div className="container">
-        <h1 className="text-[60px] font-medium">
+        <h1 className="text-[32px] md:text-[60px] font-medium">
           Testimonials From Our{" "}
           <span className="text-primary font-expertise font-bold">
             Satisfied
           </span>{" "}
           Patients
         </h1>
+
+        <div className="ResponsiveMobile flex flex-col gap-6 md:hidden mt-10">
+          <TestimonialSlider
+            imgWidth={397}
+            src={testimonial.src}
+            alt="Testimonial"
+            docName="David Panjaitan"
+            docSpeciality="Software Engineer"
+            docDesc="I've been using this site for a few months, and it's incredibly reliable. I appreciate the convenience of booking and canceling appointments anytime, anywhere."
+          />
+
+          <TestimonialSlider
+            imgWidth={397}
+            src={testimonialtwo.src}
+            alt="Testimonial"
+            docName="Ester Howard"
+            docSpeciality="Project Manager"
+            docDesc="Managing appointments for my entire family used to be chaotic. This site makes it so much easier to keep track of everyone’s schedules in one place."
+          />
+
+          <div className="mt-2">
+            <Button
+              className="justify-center bg-transparent text-primary! border"
+              btntext="See More"
+              icon={<IoArrowForward className="text-xl" />}
+            />
+          </div>
+        </div>
       </div>
       <div className="relative pt-10 pb-23 overflow-hidden hidden md:block">
         <div className="container relative">
