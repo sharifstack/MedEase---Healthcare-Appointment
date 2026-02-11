@@ -7,6 +7,7 @@
   --color-background: #f7f7f7;
   --color-textbadge: #f2f7ff;
   --color-slidericon: #e6e6e6;
+  --color-footer: #1a1a1a;
 }
 
 body {
@@ -79,11 +80,40 @@ body {
   z-index: 0;
 }
 
-/* ONLY #000000 at 30% */
 .image-section::after {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 2;
+}
+
+.image-mobile {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.image-mobile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/aftermobile.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.image-mobile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 3;
 }
