@@ -33,6 +33,30 @@ const HealthAdvice = () => {
         </div>
 
         <div className="ResponsiveMobile flex flex-col gap-6 md:hidden mt-10">
+          <HealthAdviceCard
+            src={coverone.src}
+            tipsName="Diet Tips"
+            date="28 April 2024"
+            title="Diet Tips for a Healthier Lifestyle"
+            desc="Maintaining a healthy diet is crucial for overall well-being and can prevent numerous health issues."
+          />
+
+          <HealthAdviceCard
+            src={covertwo.src}
+            tipsName="Health Tips"
+            date="21 April 2024"
+            title="The Importance of Regular Health..."
+            desc="Regular health screenings are essential for early detection and prevention of various health condi..."
+          />
+
+          <HealthAdviceCard
+            src={coverthree.src}
+            tipsName="Health Tips"
+            date="14 April 2024"
+            title="Boosting Your Immune System Natu..."
+            desc="A strong immune system is vital for fighting off infections and staying healthy. This article pro..."
+          />
+
           <div className="mt-2">
             <Button
               className="justify-center bg-transparent text-primary! border"
