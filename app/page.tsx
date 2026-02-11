@@ -4,6 +4,7 @@ import DoctorsExpertise from "./components/homepage/DoctorsExpertise";
 import About from "./components/homepage/About";
 import AppFeatures from "./components/homepage/AppFeatures";
 import Testimonial from "./components/homepage/Testimonial";
+import HealthAdvice from "./components/homepage/HealthAdvice";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <About />
       <AppFeatures />
       <Testimonial />
+      <HealthAdvice />
     </div>
   );
 }
