@@ -10,6 +10,8 @@ const SliderCard = ({
   src,
   alt,
   className = "",
+  h4font,
+  descfont,
 }: {
   specialistName: string;
   desc: string;
@@ -18,6 +20,8 @@ const SliderCard = ({
   src?: string;
   alt?: string;
   className?: string;
+  h4font?: string;
+  descfont?: string;
 }) => {
   return (
     <div className={`py-12 px-6  rounded-xl bg-background flex ${className}`}>
@@ -25,8 +29,12 @@ const SliderCard = ({
         <span className="icon p-2 inline-block rounded-full bg-secondary/20">
           {icon}
         </span>
-        <h4 className="font-medium text-[32px]">{specialistName}</h4>
-        <p className="font-normal text-xl text-secondary w-94 pt-5 pb-2">
+        <h4 className={`font-medium md:text-[32px] ${h4font}`}>
+          {specialistName}
+        </h4>
+        <p
+          className={`font-normal   md:text-xl text-secondary pt-5 pb-2 ${descfont}`}
+        >
           {desc}
         </p>
 
@@ -40,8 +48,14 @@ const SliderCard = ({
           </div>
         )}
       </div>
-      <div>
-        <img className="w-full h-full object-cover" src={src} alt={alt} />
+      <div className=" ">
+        {src && (
+          <img
+            className="md:w-auto w-34 h-35 md:h-auto object-contain "
+            src={src}
+            alt={alt}
+          />
+        )}
       </div>
     </div>
   );
