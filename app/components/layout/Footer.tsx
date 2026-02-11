@@ -45,10 +45,10 @@ const footerItems = [
 
 const Footer = () => {
   return (
-    <footer className="bg-footercolor pt-25">
+    <footer className="bg-footercolor pt-15 md:pt-25">
       <div className="container">
-        <div className="flex  items-start justify-between">
-          <div>
+        <div className="flex  flex-col-reverse md:flex-row items-start justify-between">
+          <div className="mt-12 md:mt-0">
             <Link href={"/"}>
               <div className="logo flex items-center gap-4">
                 <Image src="/logo.png" alt="Logo" width={26} height={26} />
@@ -79,7 +79,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-20">
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20">
             {footerItems.map((item) => (
               <div className="">
                 <h4 className="text-xl font-medium text-white mb-6">
@@ -87,7 +87,7 @@ const Footer = () => {
                 </h4>
                 <ul>
                   {item.items.map((subItem, index) => (
-                    <li key={index} className="text-secondary font-normal py-4">
+                    <li key={index} className="text-secondary font-normal py-4 cursor-pointer">
                       {subItem.name}
                     </li>
                   ))}
@@ -97,7 +97,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <h4 className="text-center text-primary pt-15 pb-4">
+      <h4 className="text-center text-primary pt-7.5 md:pt-15 pb-4">
         © 2026 Sharif Ahmed. All rights reserved.
       </h4>
     </footer>
